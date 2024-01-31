@@ -1,0 +1,78 @@
+body {
+  margin: 20px;
+  font-family: "Arial", sans-serif;
+  color: #302b21;
+}
+
+h1,
+h2,
+h3,
+p {
+  font-weight: lighter;
+  color: #302b21;
+}
+
+button {
+  cursor: pointer;
+}
+
+.roed {
+  color: red;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #000000;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  transition: text-shadow 0.3s ease;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.overskrift {
+  text-align: center;
+}
+
+.container1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 50px;
+  text-align: center;
+}
+
+.container2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  margin: 50px;
+}
+
+@media screen and (max-width: 800px) {
+  .container1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .container2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  h2,
+  h3,
+  p {
+    font-size: smaller;
+  }
+  h2 {
+    color: #302b21;
+  }
+}
