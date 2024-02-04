@@ -4,6 +4,12 @@ body {
   color: #302b21;
 }
 
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 h1,
 h2,
 h3,
@@ -16,7 +22,7 @@ button {
   cursor: pointer;
 }
 
-.roed {
+.roed p {
   color: red;
 }
 
@@ -30,16 +36,11 @@ a:hover {
   transition: text-shadow 0.3s ease;
 }
 
-img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
 .overskrift {
   text-align: center;
 }
 
+/* layout */
 .container1 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
