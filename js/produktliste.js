@@ -20,6 +20,18 @@ function showProduct(product) {
   document.querySelector("main").appendChild(copy);
 }
 
+function showProduct(product) {
+  console.log(product);
+  // fang template
+  const template = document.querySelector(".ProduktTemplate");
+  console.log(template); // Add this line to check if the template is correctly selected
+  const copy = template.content.cloneNode(true);
+  // ændre indhold
+  copy.querySelector("h2").textContent = product.productdisplayname;
+  // append til DOM
+  document.querySelector("main").appendChild(copy);
+}
+
 /*
 {
   "id": 1163,

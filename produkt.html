@@ -30,7 +30,7 @@
 
     <main>
 
-        <article class="container2">
+        <!-- <article class="container2">
             <div>
                 <img src="https://kea-alt-del.dk/t7/images/webp/1000/1163.webp" alt="">
             </div>
@@ -42,42 +42,33 @@
                     modi ducimus voluptatum!</p>
                 <button>Læg i kurven</button>
             </div>
-        </article>
+        </article> -->
+
+
+        <template>
+            <article class="container2">
+                <div>
+                    <img src="https://kea-alt-del.dk/t7/images/webp/1000/1163.webp" alt="">
+                </div>
+                <div>
+                    <h1>"produktnavn"</h1>
+                    <h2>mærke</h2>
+                    <h3>pris</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio eveniet consectetur id quidem
+                        sunt
+                        dolorum repellat ducimus, dolore sit! Possimus culpa inventore commodi facere accusamus nisi
+                        nam
+                        modi ducimus voluptatum!</p>
+                    <button>Læg i kurven</button>
+                </div>
+            </article>
+        </template>
+
+
     </main>
 
-    <template>
-        <article class="container2">
-            <div>
-                <img src="https://kea-alt-del.dk/t7/images/webp/1000/1163.webp" alt="">
-            </div>
-            <div>
-                <h1>"Sahara Team India Fanwear Round Neck Jersey"</h1>
-                <h2>399,-</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio eveniet consectetur id quidem sunt
-                    dolorum repellat ducimus, dolore sit! Possimus culpa inventore commodi facere accusamus nisi nam
-                    modi ducimus voluptatum!</p>
-                <button>Læg i kurven</button>
-            </div>
-        </article>
-    </template>
-    <script>
-        const template = document.querySelector("template").content
-        console.log(template);
-        // lav kopi
-        const copy = template.cloneNode(true);
-
-        // skift indhold
-        copy.querySelector("h1").textContent = "jhsbfkabjf"
-        copy.querySelector("h2").textContent = "hejhejjj"
-        copy.querySelector("h2").src = "https://kea-alt-del.dk/t7/images/webp/1000/1163.webp"
-
-        // whos you daddy?
-        const parent = document.querySelector("main");
-
-        // tilføj til DOM
-        parent.appendChild(copy)
-    </script>
     <script src="menu.js"></script>
+    <script src="js/produkt.js"></script>
 </body>
 
 </html>
