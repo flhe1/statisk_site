@@ -1,15 +1,27 @@
 // https://kea-alt-del.dk/t7/api/products/1525
+
 fetch("https://kea-alt-del.dk/t7/api/products/1525")
   .then((response) => response.json())
   .then((data) => showProduct(data));
 
 function showProduct(product) {
   console.log(product);
-  document.querySelector(".container2 h1").textContent = product.productdisplayname;
-  document.querySelector(".container2 h2").textContent = product.brandname;
-  document.querySelector(".container2 h3").textContent = product.price;
-  document.querySelector(".container2 p").textContent = product.description;
-  document.querySelector(".container2 img").src = product.brandimage;
+
+  document.querySelector(".container2 .produktnavn").textContent = product.productdisplayname;
+  document.querySelector(".container2 .pris").textContent = product.price;
+  document.querySelector(".container2 .tekst").textContent = product.description;
+  document.querySelector(".container2 .brand").textContent = product.brandname;
+  document.querySelector(".container2 .type").textContent = product.articletype;
+
+  document.querySelector(".produktimg").src = `https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp`;
+  console.log("min produktid: ", product.id);
+
+  if (!product.soldout) {
+    copy.querySelector(".udsolgt").remove();
+  }
+  if (!product.discount) {
+    copy.querySelector(".rabat").remove();
+  }
 }
 
 // TEMPLATE
@@ -20,7 +32,7 @@ const copy = template.cloneNode(true);
 
 // skift indhold
 copy.querySelector("h1").textContent = "jhsbfkabjf";
-copy.querySelector("h2").src = "https://kea-alt-del.dk/t7/images/webp/1000/1163.webp";
+copy.querySelector("h2").src = "";
 
 // whos you daddy?
 const parent = document.querySelector("main");

@@ -28,22 +28,44 @@
         </nav>
     </header>
 
+
+
     <main>
         <div class="overskrift">
             <h1>Produktliste</h1>
         </div>
-        <section class="container1">
-            <template class="ProduktTemplate">
-                <article class="produkt">
-                    <a href="produkt.html"><img src="https://kea-alt-del.dk/t7/images/webp/1000/1163.webp" alt=""></a>
-                    <a href="produkt.html">
-                        <h2>"Sahara Team India Fanwear Round Neck Jersey"</h2>
-                    </a>
-                    <h3>399,-</h3>
-                </article>
-            </template>
-        </section>
-        <section class="container1">
+
+        <section class="container1"></section>
+
+    </main>
+
+    <template id="ProduktTemplate">
+
+        <article>
+            <div class="img_container">
+                <a href="produkt.html"><img src="" alt=""></a>
+            </div>
+            <a href="produkt.html">
+                <h2 class="produktnavn">"produktnavn"</h2>
+            </a>
+            <h2 class="brand">her vises tøjmærket</h2>
+            <h3><span class="pris">her vises prisen</span>,-</h3>
+            <div class="udsolgt">
+                <p>UDSOLGT</p>
+            </div>
+            <div class="rabat">
+                <p>-50%</p>
+            </div>
+        </article>
+
+    </template>
+
+
+
+
+
+
+    <!-- <section class="container1">
 
             <article class="produkt">
                 <a href="produkt.html"><img src="https://kea-alt-del.dk/t7/images/webp/1000/1163.webp" alt=""></a>
@@ -52,9 +74,8 @@
                 </a>
                 <h3>399,-</h3>
             </article>
-
-        </section>
-        <!-- <article class="rabat">
+        </section> -->
+    <!-- <article class="rabat">
                 <a href="produkt.html"><img src="https://kea-alt-del.dk/t7/images/webp/1000/1164.webp" alt=""></a>
                 <a href="produkt.html">
                     <h2>"Blue T20 Indian Cricket Jersey"</h2>
@@ -101,10 +122,11 @@
 
 
 
-    </main>
 
-    <script src="menu.js"></script>
-    <script src="produktliste.js"></script>
+
+    <script src="js/menu.js"></script>
+    <script src="js/produktliste.js"></script>
+
 </body>
 
 </html>
