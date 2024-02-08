@@ -1,6 +1,8 @@
 // https://kea-alt-del.dk/t7/api/products/1525
+const urlParams = new URLSearchParams(window.location.search);
+const id = urlParams.get("id");
 
-fetch("https://kea-alt-del.dk/t7/api/products/1525")
+fetch("https://kea-alt-del.dk/t7/api/products/" + id)
   .then((response) => response.json())
   .then((data) => showProduct(data));
 
@@ -9,7 +11,7 @@ function showProduct(product) {
 
   document.querySelector(".container2 .produktnavn").textContent = product.productdisplayname;
   document.querySelector(".container2 .pris").textContent = product.price;
-  document.querySelector(".container2 .tekst").textContent = product.description;
+  document.querySelector(".container2 .tekst").innerHTML = product.description;
   document.querySelector(".container2 .brand").textContent = product.brandname;
   document.querySelector(".container2 .type").textContent = product.articletype;
 
@@ -17,28 +19,12 @@ function showProduct(product) {
   console.log("min produktid: ", product.id);
 
   if (!product.soldout) {
-    copy.querySelector(".udsolgt").remove();
+    document.querySelector(".udsolgt").remove();
   }
   if (!product.discount) {
-    copy.querySelector(".rabat").remove();
+    document.querySelector(".rabat").remove();
   }
 }
-
-// TEMPLATE
-const template = document.querySelector("template").content;
-console.log(template);
-// lav kopi
-const copy = template.cloneNode(true);
-
-// skift indhold
-copy.querySelector("h1").textContent = "jhsbfkabjf";
-copy.querySelector("h2").src = "";
-
-// whos you daddy?
-const parent = document.querySelector("main");
-
-// tilføj til DOM
-parent.appendChild(copy);
 
 /*{
 {
